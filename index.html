@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiba BEN YOUNES | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+            --primary: #bc8815;
+            --primary-dark: #f8fafc;
+            --secondary: #000000;
+            --light: #f8fafc;
+            --gray: #48361e;
+            --dark: #48361e;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+
+
+        p {
+            margin-bottom: 1.5rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--secondary);
+            opacity: 0.9;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px 30px;               
+            margin-top: 1rem;
+        }
+
+        .skill-badge {
+            margin-bottom: 0; 
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--secondary);
+            opacity: 0.9;
+            font-weight: 400;
+            line-height: 1.7;
+            font-size: 1.4rem;
+    
+    
+            display: list-item;
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+
+        .skill-item .outils-tech {
+            font-size: 0.85rem;
+            color: var(--primary); 
+            margin-top: 5px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        #home p {
+            margin-bottom: 1.5rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--light);
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 400;
+            line-height: 1.7;
+            background: rgba(84, 64, 30, 0.2); 
+            backdrop-filter: blur(10px);          
+            padding: 20px;                        
+            border-radius: 15px;                  
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            display: inline-block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+        section {
+            padding: 100px 0;
+        }
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: #ffffff;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+            cursor: pointer;
+        }
+
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: #48361e;
+        }
+
+
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            height: 100%;
+            text-decoration: none;
+        }
+
+
+        .logo-img {
+            height: 80px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+
+
+
+        .logo-img.footer-logo {
+            height: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+
+        .logo-text.footer-logo {
+            color: white;
+        }
+
+
+        .logo-text.footer-logo span {
+            color: #bc8815;
+        }
+
+
+        .hero-logo {
+            display: none;
+        }
+
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #48361e;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            height: 80px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light);
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            position: relative;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+
+        /* Hero Section */
+        #home {
+            position: relative;
+            overflow: hidden; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .back-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1; 
+            opacity: 0.9;
+        }
+        .hero {
+            padding-top: 150px;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff 0%, #bc8815 100%);
+            position: relative;
+        }
+
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+
+        .hero-text {
+            flex: 1;
+        }
+
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+
+        .hero-image img {
+            max-width: 70%;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+            border: 5px solid #bc8815;
+        }
+
+
+        .hero h1 {
+            margin-bottom: 1rem;
+        }
+
+
+        .hero p {
+            font-size: 1.2rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+
+        .highlight {
+            color: var(--light);
+        }
+
+
+        .social-links {
+            display: flex;
+            margin-top: 2rem;
+        }
+
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: rgb(255, 255, 255);
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: var(--transition);
+        }
+
+
+        .social-links a:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+
+
+        /* Logo Watermark in Hero */
+        .logo-watermark {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+
+        .logo-watermark img {
+            height: 150px;
+            width: auto;
+        }
+
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+
+        .about-text {
+            flex: 1;
+        }
+
+
+        .skills {
+            flex: 1;
+        }
+
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+
+        .skill-name {
+            display: flex;
+            font-family: 'Inter', sans-serif;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+
+        .skill-bar {
+            height: 10px;
+            background-color: #e2e8f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+
+        .skill-progress {
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 5px;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+
+        .project-card {
+            background-color: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+
+        /* Project Logo Overlay */
+        .project-logo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #bc8815;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+
+        .project-card:hover .project-logo-overlay {
+            opacity: 1;
+        }
+
+
+        .project-logo-overlay img {
+            display: none;
+        }
+
+
+        .project-info {
+            padding: 25px;
+        }
+
+
+        .project-info h3 {
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+
+        .project-tags span {
+            background-color: #ebebeb;
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+
+
+        .contact-photo-container {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-photo {
+            width: 100%;
+            max-width: 400px; 
+            height: auto;
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+            border: 2px solid var(--light); 
+            object-fit: cover;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+
+        .contact-form {
+            flex: 1;
+        }
+
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+
+        .form-group label {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #bc8815;
+            border-radius: var(--radius);
+            font-family: 'Source Sans Pro', sans-serif;
+            transition: var(--transition);
+        }
+
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: #48361e;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+
+        .footer-logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .experience-box {
+            padding-left: 20px;
+        }
+
+        .exp-item {
+            margin-bottom: 25px;
+            border-left: 3px solid var(--primary); 
+            padding-left: 15px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .exp-title {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .exp-date {
+            font-size: 0.85rem;
+            background: var(--primary);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+
+        .exp-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 8px !important;
+            background: none !important; 
+            padding: 0 !important;
+        }
+
+        .exp-tags span {
+            font-size: 0.75rem;
+            background: #f0f0f0;
+            padding: 3px 7px;
+            margin-right: 5px;
+            border-radius: 4px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .footer-logo-section p {
+            color: #bc8815;
+            margin-top: 10px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.9rem;
+        }
+
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+           
+            h2 {
+                font-size: 2.2rem;
+            }
+           
+            .hero-content, .about-content, .contact-content {
+                flex-direction: column;
+            }
+           
+            .hero {
+                padding-top: 130px;
+            }
+           
+            .hero-text, .hero-image {
+                text-align: center;
+            }
+           
+            .social-links {
+                justify-content: center;
+            }
+           
+            .logo-watermark {
+                display: none;
+            }
+           
+            .hero-logo {
+                display: block;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+           
+            .hero-logo img {
+                height: 60px;
+                width: auto;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+           
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+           
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+           
+            .nav-links li {
+                margin: 15px 0;
+            }
+           
+            section {
+                padding: 80px 0;
+            }
+           
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+           
+            .footer-logo-section {
+                align-items: center;
+            }
+        }
+
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+           
+            h2 {
+                font-size: 1.8rem;
+            }
+           
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+           
+            .logo-img {
+                height: 32px;
+            }
+           
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo-container">
+                   
+                    <img src="/images/logo2.png"" alt="Logo" class="logo-img">
+                    <span class="logo-text">Secure BY H</span>
+                </a>
+               
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+               
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">Parcours</a></li>
+                    <li><a href="#compétences">Compétences</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certif">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+   
+    <section id="home" class="hero">
+        <video autoplay muted loop playsinline class="back-video">
+            <source src="/images/0_Earth_Globe_3840x2160.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            
+            <div class="hero-logo">
+                <img src="/images/hero.jpg" alt="Logo">
+            </div>
+           
+            <div class="hero-content">
+                <div class="hero-text"> 
+                    <h1>C'est <span class="highlight">Hiba BEN YOUNES</span></h1>
+                    <h3>Ingénieur Cybersécurité</h3>
+                    <p>Etudiante en troisième année BUT réseaux et télécommunications spécialité cybersécurité en double diplomation. Je trouve le domaine de cybersécurité très intéressant et très important surtout avec le manque de souveraineté de nos jours. Je vise m'orienter encore plus dans la conformité cyber et la réponse aux incidents.</p>
+                    <a href="#projects" class="btn">Découvrons mes projets</a>
+                   
+                    <div class="social-links">
+                        <a href="https://github.com/HBYdev"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/hiba-ben-younes-a89559244"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+               
+                <div class="hero-image">
+                    <img src="/images/hero.jpg" alt="Hiba">
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+       
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Parcours</h2>
+            </div>
+           
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Mon parcours en cybersécurité</h3>
+                    <p>Mon parcours avec la cybersécurité a commencé par une licence en "Ingénierie des réseaux et des systèmes" à l'Insitut Supérieur de l'Informatique en Tunisie.</p>
+                    <p>Au cours de mes 2 premières années j'ai aquis des compétences diverses et je me suis intégrée dans beaucoup de mission associatives créant ainsi un profile unique et polivalant.</p>
+                    <p>J'était sélectionnée parmis les lauréats pour poursuivre ma dernière année de licence en BUT Réseaux et télécommunications à l'IUT de Villetaneuse en France. C'est là où je me suis spécialisée en cybersécurité et j'ai commencé à appliquer des notions diverses entre pentest, analyse de risques et supervision réseaux.</p>
+                    <a href="/images/BEN YOUNES hiba.pdf" class="btn btn-outline">Consultons mon CV</a>
+                </div>
+                <div class="experience-box">
+                    <h3>Expériences Clés</h3>
+    
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <span class="exp-title">Stage GRC</span>
+                                <span class="exp-date">Juillet 2025</span>
+                            </div>
+                        <p class="exp-desc">Keystone Groupe</p>
+                        <p class="exp-desc">Automatisation de l'audit de fuite de données.</p>
+                        <p class="exp-desc">Utilisation des API des outils opensource de détection de fuite de données.</p> 
+                        <p class="exp-desc">Génération des recommendations et d'un rapport complet.</p>
+                        <div class="exp-tags">
+                            <span>Audit</span> <span>Fuite de données</span> <span>Python streamlit</span>
+                        </div>
+                        </div>
+
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <span class="exp-title">Associatives: Responsable sys de management et de la qualité</span>
+                                <span class="exp-date">2024-2025</span>
+                                
+                            </div>
+                            <p class="exp-desc">CODEX JE</p>
+                            <p class="exp-desc">Direction des audits internes.</p>
+                            <p class="exp-desc">Préparation pour les audits externes.</p>
+                            <p class="exp-desc">Documentation politiqueq, procèdures, guides.</p>
+                            <p class="exp-desc">Suivi d'avancement des processus avec des KPIs, evaluation de conformité par rapport à ISO 9001.</p>
+                            <div class="exp-tags">
+                                <span>Normes</span> <span>Documentation</span> <span>Audit</span>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <span class="exp-title">Participante TEM 2026</span>
+                                <span class="exp-date">Janvier 2025</span>
+                                
+                            </div>
+                            <p class="exp-desc">Orange Cyberdefense</p>
+                            <p class="exp-desc">Gestion de crise cyber</p>
+                            <p class="exp-desc">Anticipation des événnements</p>
+                            <p class="exp-desc">Mise en place des PCA, PRA et du RETEX.</p>
+                            <p class="exp-desc">Informer les autorités.</p>
+                            <p class="exp-desc">Protéger les biens métiers critiques.</p>
+                            <div class="exp-tags">
+                                <span>Anticipation</span> <span>Réponse aux Incidents</span> <span>Prise de décision</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+    <section id="compétences">
+        <div class="container">
+            <div class="section-title">
+                <h2>Compétences</h2>
+            </div>
+           
+            <div class="about-content">
+                <div class="skills">
+                    <h3>Compétences Techniques</h3>
+                   
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Administration Réseau Windows / Linux</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                        <p class="outils-tech">windows server / ligne de commandes / cisco packet tracer</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Normes et conformité</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                        <p class="outils-tech">ISO 27001 / NIST / RGPD / DORA / IA ACT / CRA / Audit interne / EBIOS RM</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>SOC</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                        <p class="outils-tech">wazuh / Goaccess / SIEM / Wireshark</p>
+                    </div>
+                
+                   
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Pentest</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="60"></div>
+                        </div>
+                        <p class="outils-tech">nmap scan / Burpsuite / Hydra / Johntheripper / Gophish / Cowrie honeypot / WPscan / Metasploit</p>
+                    </div>
+                   
+                    
+                   
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Réponse aux Incidents</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="40"></div>
+                        </div>
+                        <p class="outils-tech">Rapport investigation / PRA / PCA / RETEX / forensics / OSINT</p>
+                    </div>
+
+                </div>
+               
+                <div class="about-text">
+                    <h3>Compétences Transversales</h3>
+                    <div class="skills-grid"></div>
+                        <p class="skill-badge">Travail en équipe</p>
+                    
+                        <p class="skill-badge">Adaptabilité</p>
+                        <p class="skill-badge">Capacité de former</p>
+                        <p class="skill-badge">Analyse</p>
+                        <p class="skill-badge">Documentation</p>
+                        <p class="skill-badge">Git/Gitlab</p>
+                        <p class="skill-badge">Outils Google + Outils Microsoft</p>
+                  
+                        <p class="skill-badge">Gestion de projet</p>
+                    
+                        <p class="skill-badge">Innovation</p> 
+                        
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mes Projects</h2>
+            </div>
+           
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/metasploit.png" alt="Pentest"></a>
+                        <div class="project-logo-overlay">
+                            
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Pentest</h3>
+                        <div class="project-tags">
+                            <span>goaccess</span>
+                            <span>CVSS</span>
+                            <span>Scan nmap</span>
+                            <span>Pentest</span>
+                            <span>Exploitation</span>
+                            <span>Reconnaissance</span>
+                        </div>
+                        <p>Reconnaissance de deux machines différentes. Exploitation de leurs failles grâce à des outils opensource comme metasploit. Rédaction d'un rapport d'audit avec mon équipe de travail.</p>
+                        <a href="/images/Rapport Daudit Pentest.docx (1).pdf" class="btn btn-outline" target="_blank">Consulter le rapport</a>
+                    </div>
+                </div>
+               
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/rootme.png" alt="Forensics"></a>
+                        <div class="project-logo-overlay">
+                            
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Forensics</h3>
+                        <div class="project-tags">
+                            <span>Hashcat</span>
+                            <span>Forensics</span>
+                            <span>Pentester Junior</span>
+                            <span>Burpsuite</span>
+                            <span>HTTP</span>
+                            <span>Redirection</span>
+                        </div>
+                        <p>Travail sur root me pro. Déchiffrement des hash de difficulté croissantes avec une partie de redirection et de attaque sur le HTTP.</p>
+                        <a href="/images/TP2_IR_Hiba_BEN_YOUNES_Nour_BEN_SOLTANA.pdf" class="btn btn-outline">Consulter le rapport</a>
+                    </div>
+                </div>
+               
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/wazuh.png" alt="Supervision">
+                        <div class="project-logo-overlay">
+                           
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Supervision</h3>
+                        <div class="project-tags">
+                            <span>Asterisk</span>
+                            <span>Telephonie</span>
+                            <span>Eavesdropping</span>
+                            <span>Wazuh</span>
+                            <span>DHCP Flooding</span>
+                            <span>Architecture</span>
+                            <span>Correction Vulnérabilités</span>
+                        </div>
+                        <p>Projet contenant deux grandes partie. Asterisk m'a appris sur les gestion des telephones IP leurs configurations et leurs failles. Pour le wazuh j'ai appris à lire ses dashboards et ses analyses les comprendre et y remédier.</p>
+                        <a href="https://www.canva.com/design/DAG_uAjEtL0/fQkwrDUt4ESBOBd6EcLC0w/edit?utm_content=DAG_uAjEtL0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-outline">Consulter le rapport</a>
+                    </div>
+                </div>
+            
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/ebios.jpg" alt="EBIOS RM"></a>
+                        <div class="project-logo-overlay">
+                            
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>EBIOS RM</h3>
+                        <div class="project-tags">
+                            <span>source de risques</span>
+                            <span>Menaces</span>
+                            <span>Mesures de sécurité</span>
+                            <span>Autorité de sécurité</span>
+                            <span>Evaluation de risque</span>
+                        
+                        </div>
+                        <p>Une analyse ebios était mené sur un cas d'entreprise proposé. Ce projet m'a permis de comprendre comment analysé la situation d'une entreprise et détecter ses biens métiers et ses valeurs et faire une analyse de risques visant à les protéger.</p>
+                        <a href="https://www.canva.com/design/DAG748GoytI/oClFJFbQdLfQnMTVAtQYGg/edit?utm_content=DAG748GoytI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-outline">Consulter le rapport</a>
+                    </div>
+                </div>
+                                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/TEM.png" alt="TEM"></a>
+                        <div class="project-logo-overlay">
+                            
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Gestion de crise cyber</h3>
+                        <div class="project-tags">
+                            <span>Réponse aux Incidents</span>
+                            <span>Mitigation</span>
+                            <span>RSSI</span>
+                            <span>Anticipation</span>
+                        
+                        </div>
+                        <p>Un événnement très important sur la gestion de crise cyber.Cette expérience m'a donné la chance pour élargir mon réseau ainsi que mon savoir faire. J'ai confirmé à ce moment mon intérêt vers le domaine de réponse aux incidents.</p>
+                        <a href="https://www.linkedin.com/posts/activity-7420488010179342336-O6MB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADyYE8kBLGpFsPPJFL0DtdC2HqGO7F8vPyU" class="btn btn-outline" target="_blank">Consulter le rapport</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section id="certif">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certifications</h2>
+            </div>
+           
+            <div class="projects-grid">
+                <!-- Project 1 -->
+
+               
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/logcodex.png" alt="Codex"></a>
+                        <div class="project-logo-overlay">
+                            
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Responsable qualité</h3>
+                        <div class="project-tags">
+                            <span>Audit</span>
+                            <span>Documentation</span>
+                            <span>ISO</span>
+                            <span>Conformité</span>
+                            <span>Google tools</span>
+                            
+                        </div>
+                        
+                        <a href="images/codex.png" target="_blank" class="btn btn-outline">
+                            Consulter le certificat
+                        </a>
+                    </div>
+                </div>
+               
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/hultlog.png" alt="HultPrize">
+                        <div class="project-logo-overlay">
+                           
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Directrice des relations externes</h3>
+                        <div class="project-tags">
+                            <span>Communication</span>
+                            <span>Professionalisme</span>
+                        </div>
+                        
+                        <a href="images/hult.png" target="_blank" class="btn btn-outline">
+                            Consulter le certificat
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/ibmlog.png" alt="IBM">
+                        <div class="project-logo-overlay">
+                           
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Formation Introduction à la Cybersécurité</h3>
+                        <div class="project-tags">
+                            <span>Attaques</span>
+                            <span>Défense</span>
+                            <span>Attaquant</span>
+                        </div>
+                        
+                        <a href="images/IBM.png" target="_blank" class="btn btn-outline">
+                            Consulter le certificat
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/gdsc.png" alt="Supervision">
+                        <div class="project-logo-overlay">
+                           
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hackathon Machine Learning</h3>
+                        <div class="project-tags">
+                            <span>Google collab</span>
+                        </div>
+                        
+                        <a href="images/ML.png" target="_blank" class="btn btn-outline">
+                            Consulter le certificat
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/logjci.png" alt="JCI"></a>
+                        <div class="project-logo-overlay">
+                            
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Vice Présidente de Formations et de développement</h3>
+                        <div class="project-tags">
+                            <span>Planification</span>
+                            <span>Oraganisation</span>
+                            <span>Communications</span>
+                            
+                        
+                        </div>
+                        <a href="images/jci.png" target="_blank" class="btn btn-outline">
+                            Consulter le certificat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez moi</h2>
+            </div>
+           
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Travaillons Ensemble!</h3>
+                    <p>Ouverte à tout projet et opportunités. N'hésitez pas à me contacter.</p>
+                   
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>benyounes.hiba@outlook.fr</p>
+                        </div>
+                    </div>
+                   
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+33*******47</p>
+                        </div>
+                    </div>
+                   
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Localisation</h4>
+                            <p>France, île de france</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <img src="/images/logo2.png" alt="Hiba Ben Younes" class="contact-photo">
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo-section">
+                    <a href="#home" class="logo-container">
+                        <!-- Logo Image in Footer -->
+                        
+                        <span class="logo-text">Hiba BEN YOUNES</span>
+                    </a>
+                    <p>Ingénieur cuybersécurité</p>
+                </div>
+               
+                <div class="social-links">
+                    <a href="https://github.com/HBYdev"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hiba-ben-younes-a89559244"><i class="fab fa-linkedin-in"></i></a>
+                
+                </div>
+            </div>
+           
+            <div class="copyright">
+                <p>&copy; 2026 Hiba Ben Younes. Tout droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+       
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+       
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+       
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+       
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+           
+            skillBars.forEach(bar => {
+                const barPosition = bar.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+               
+                if (barPosition < screenPosition) {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                }
+            });
+        }
+       
+        window.addEventListener('scroll', animateSkillBars);
+       
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+       
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+           
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+           
+            // In a real application, you would send this data to a server
+            // For this demo, we'll just show an alert
+            alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+           
+            // Reset form
+            contactForm.reset();
+        });
+       
+        // Initialize skill bars on page load
+        window.addEventListener('load', () => {
+            // Trigger skill bar animation if already in view
+            animateSkillBars();
+        });
+       
+        // Function to update logo in all places
+        function updateLogo(newLogoSrc) {
+            // Update all logo images
+            document.querySelectorAll('.logo-img').forEach(img => {
+                img.src = newLogoSrc;
+            });
+           
+            // Update hero logo
+            const heroLogo = document.querySelector('.hero-logo img');
+            if (heroLogo) heroLogo.src = newLogoSrc;
+           
+            // Update logo watermark
+            const watermarkLogo = document.querySelector('.logo-watermark img');
+            if (watermarkLogo) watermarkLogo.src = newLogoSrc;
+           
+            // Update project overlay logos
+            document.querySelectorAll('.project-logo-overlay img').forEach(img => {
+                img.src = newLogoSrc;
+            });
+           
+            console.log('Logo updated successfully!');
+        }
+       
+        // You can call this function to update the logo when needed
+        // Example: updateLogo('path/to/your/logo.png');
+    </script>
+</body>
+</html>
+
